@@ -8,7 +8,7 @@
     >
     <router-link
       class="text-center d-block mt-5 p-3 black--text"
-      :to="{ name: 'Categories' }"
+      :to="{ name: 'categories' }"
       >Categories</router-link
     >
   </div>

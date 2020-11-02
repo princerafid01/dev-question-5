@@ -62,7 +62,6 @@ export default {
       this.dialog = false;
       this.mode = "create";
       this.dialog = true;
-      console.log(this.isEditMode());
     },
     createCategory() {
       this.categories.push({
@@ -72,6 +71,7 @@ export default {
 
       this.set("categories", this.categories);
       this.$emit("addedCategory", this.categories);
+      this.$emit("newCategoryName", this.name);
 
       this.dialog = false;
       this.name = null;
@@ -92,7 +92,7 @@ export default {
       return !!(this.mode === "edit");
     },
   },
-  created() {
+  mounted() {
     if (this.get("categories")) {
       this.categories = this.get("categories");
     } else {
