@@ -64,6 +64,9 @@ export default {
       this.dialog = true;
     },
     createCategory() {
+      if (!this.categories) {
+        this.categories = [];
+      }
       this.categories.push({
         name: this.name,
         createdAt: Date.now(),
